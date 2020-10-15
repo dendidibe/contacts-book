@@ -24,7 +24,7 @@
         type="text"
         v-model="note.text"
         v-on:keyup.enter="editable = !editable"
-        @change="$emit('disable-btns', note)"
+        v-on:input="$emit('disable-btns', note)"
       />
       <input
         class="contact-info contact-info__description"

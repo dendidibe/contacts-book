@@ -22,6 +22,7 @@
           :note="note"
           :key="index"
           @remove-note="handleDeleteNote"
+          @disable-btns="handleDisableButtons"
       />
     </ul>
     <div class="new-note">
@@ -34,7 +35,7 @@
       <span @click="addNote">Add New Contact</span>
     </div>
     <hr />
-    <div v-if="contact.title" >
+    <div v-if="contact.title && validData" >
         <icon-button
           color="black"
           type="save"
@@ -77,7 +78,7 @@ export default {
   data () {
     return {
       contactHistory: [],
-      // validData: false,
+      validData: false,
       histotyIndex: 0,
       watching: true,
       contactId: "",
@@ -165,9 +166,9 @@ export default {
         this.contact = this.contactHistory[this.histotyIndex];
       }
     },
-    // handleDisableButtons (note) {
-    //   this.validData = !!note[0].text;
-    // },
+    handleDisableButtons (note) {
+      this.validData = !!note.text;
+    },
     /**
      * handle deleting Contact with confirm dialog
      */
@@ -182,7 +183,6 @@ export default {
     async handleDeleteNote (note) {
       if (await confirm("Do you really want to delete this note?",
         "All unsaved changes will be lost.")) {
-        console.log(note);
         this.onRemoveNote(note);
       }
     },
