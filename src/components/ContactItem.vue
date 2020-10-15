@@ -31,6 +31,7 @@
         placeholder="Enter your contact description"
         type="text"
         v-model="note.description"
+        v-on:input="$emit('disable-btns', note)"
         v-on:keyup.enter="editable = !editable"
       />
 

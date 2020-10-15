@@ -119,6 +119,7 @@ export default {
      * saving Contact
      */
     saveContact () {
+      this.handleDisableButtonss(this.contact.notes);
       ContactService.updateItem(this.contact.contactId, this.contact);
     },
     /**
@@ -167,8 +168,9 @@ export default {
       }
     },
     handleDisableButtons (note) {
-      this.validData = !!note.text;
+      this.validData = !!note.text && !!note.description;
     },
+
     /**
      * handle deleting Contact with confirm dialog
      */
