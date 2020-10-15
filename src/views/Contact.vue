@@ -119,7 +119,6 @@ export default {
      * saving Contact
      */
     saveContact () {
-      this.handleDisableButtonss(this.contact.notes);
       ContactService.updateItem(this.contact.contactId, this.contact);
     },
     /**

@@ -6,7 +6,7 @@
     <hr/>
     <router-view/>
     <dialogs-wrapper transition-name="fade"></dialogs-wrapper>
-    <p>Made by Mykhailo Mogilyk. Link to the <a href="https://github.com/dendidibe/contact-book">source</a>. </p>
+    <p>Made by Mykhailo Mogilyk. Link to the <a href="https://github.com/dendidibe/contacts-book">source</a>. </p>
   </div>
 </template>
 
@@ -58,18 +58,6 @@ hr {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
-.green{
-  color: rgb(23, 4, 48)
-}
-.red{
-  color: rgb(88, 6, 6);
-}
-.orange{
-  color: rgb(60, 15, 97)
-}
-.grey{
-  color: grey;
-}
 .black{
   color: black;
   font-weight: bold;

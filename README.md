@@ -3,6 +3,8 @@
 ## Project setup
 
 ```
+git clone https://github.com/dendidibe/contacts-book.git
+cd contacts-book
 npm install
 ```
 
