@@ -9,5 +9,5 @@ npm run build
 git init
 git add -A
 git commit -m 'Deploy'
-git push -f git@github.com:dendidibe/contacts-book.git master:gh-pages
+git push -f git@github.com:dendidibe.github.io.git master
 cd -
