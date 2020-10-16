@@ -115,6 +115,7 @@ export default {
       const i = this.contact.notes.indexOf(note);
       this.contact.notes.splice(i, 1);
     },
+
     /**
      * saving Contact
      */

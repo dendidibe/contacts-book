@@ -17,23 +17,24 @@
     ></span> -->
       <div
         v-click-outside="setEditFalse"
+        class="contact-fields"
       >
-      <input
-        class=" contact-info contact-info__name"
-        placeholder="Enter your contact property"
-        type="text"
-        v-model="note.text"
-        v-on:keyup.enter="editable = !editable"
-        v-on:input="$emit('disable-btns', note)"
-      />
-      <input
-        class="contact-info contact-info__description"
-        placeholder="Enter your contact description"
-        type="text"
-        v-model="note.description"
-        v-on:input="$emit('disable-btns', note)"
-        v-on:keyup.enter="editable = !editable"
-      />
+        <input
+          class=" contact-info contact-info__name"
+          placeholder="Enter your contact property"
+          type="text"
+          v-model="note.text"
+          v-on:keyup.enter="editable = !editable"
+          v-on:input="$emit('disable-btns', note)"
+        />
+        <input
+          class="contact-info contact-info__description"
+          placeholder="Enter your contact description"
+          type="text"
+          v-model="note.description"
+          v-on:input="$emit('disable-btns', note)"
+          v-on:keyup.enter="editable = !editable"
+        />
 
       </div>
 
@@ -87,7 +88,8 @@ span{
 }
 li {
   display: flex;
-  flex-wrap: nowrap;
+  flex-direction: column;
+  flex-wrap: wrap;
   background-color: #e2e2e2;
   height: 36px;
   margin: 5px 0px;
@@ -98,10 +100,11 @@ li {
 }
 
 input[type="text"] {
-  width: 16rem;
-  max-width: 300px;
+  display: block;
+  width: 100%;
+  max-width: 350px;
   height: 25px;
-  padding: 4px 10px;
+  padding: 0.2rem 0.5rem;
   border: none;
   border-radius: 5px;
   font-family: cursive, sans-serif;
@@ -123,9 +126,27 @@ div{
 .contact-info__name {
   margin-right: 1rem;
 }
+@media screen and (max-width: 660px) {
+  li {
+    height: 80px;
+    width: 100%;
+  }
+  input[type="text"]{
+    margin-top: 0.5rem;
+    width: 13rem;
+  }
+  .contact-fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
 @media screen and (max-width: 375px) {
   input[type="text"]{
     max-width: 150px;
   }
+
+}
 }
 </style>
