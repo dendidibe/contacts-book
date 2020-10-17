@@ -23,7 +23,7 @@
         @action="goToNote"
         label="Edit Note"
         >
-        Edit Note
+        Edit
         </icon-button>
       <icon-button
         type="delete_outline"
