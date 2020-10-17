@@ -32,7 +32,7 @@
           @action="addNote"
           label="Add"
       ></icon-button>
-      <span @click="addNote">Add New Contact</span>
+      <span @click="addNote">Add contact notes</span>
     </div>
     <hr />
     <div v-if="contact.title && validData" >

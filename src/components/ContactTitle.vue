@@ -15,9 +15,6 @@
 
 <script>
 
-/**
- * @module ContactTitle editing and saving contact title
- */
 export default {
   name: "ContactTitle",
   components: {

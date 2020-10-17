@@ -8,7 +8,7 @@
       >
         {{ note.text  ? note.text : "Click to edit contact info" }}
 
-        {{ note.description  ? note.description : "Click to edit Todo" }}
+        {{ note.description  ? note.description : "Click to edit Note" }}
       </span>
       <span
       :class="{ completed: (note.completed&&note.description) }"
